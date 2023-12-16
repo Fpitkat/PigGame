@@ -5,7 +5,6 @@ const score1El = document.getElementById("score--1")
 const diceEl = document.querySelector(".dice")
 const current0El = document.getElementById("current--0")
 const current1El = document.getElementById("current--1")
-
 const player0El = document.querySelector(".player--0")
 const player1El = document.querySelector(".player--1")
 
@@ -34,20 +33,17 @@ function initiateGame() {
   currentScore = 0
   activePlayer = 0
   playing = true
-  score0El.textContent = 0 //
-  score1El.textContent = 0 //
+  score0El.textContent = 0
+  score1El.textContent = 0
   diceEl.classList.add("hidden")
-  currentScore = 0
-  scores = [0, 0]
-  current0El.textContent = currentScore //
-  current1El.textContent = currentScore //
-  activePlayer = 0
-  player0El.classList.add("player--active") //
-  player1El.classList.remove("player--active") //
-  playing = true
+  current0El.textContent = currentScore
+  current1El.textContent = currentScore
+  player0El.classList.add("player--active")
+  player1El.classList.remove("player--active")
+
   document
     .querySelector(`.player--${activePlayer}`)
-    .classList.remove("player--winner") //
+    .classList.remove("player--winner")
 }
 
 btnRoll.addEventListener("click", function () {
